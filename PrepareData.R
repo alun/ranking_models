@@ -1,7 +1,7 @@
 library(tidyverse)
 
-source('Config.R', prompt.echo =TRUE)
-source('PlotConfig.R', prompt.echo =TRUE)
+source('Config.R')
+source('PlotConfig.R')
 
 # load ATP source data
 source_data <- readr::read_csv(files$file_in) %>%

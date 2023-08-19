@@ -13,6 +13,7 @@ charts <- list(
   sets_played = "charts/sets_played.svg",
   prior_motivation = "charts/prior_motivation.svg",
   abilities = "charts/abilities.svg",
+  ability_variance = "charts/ability_variance.svg",
   prob_winning_splits = "charts/prob_winning_splits.svg",
   rank_vs_cluster = "charts/rank_vs_cluster.svg",
   rank_vs_cluster_1_prob = "charts/rank_vs_cluster_1_prob.svg",
@@ -25,6 +26,7 @@ charts <- list(
 
 colors <- list(
   alpha = 0.7,
+  color_0 = 'black',
   color_1 = 'green',
   color_2 = 'magenta'
 )
