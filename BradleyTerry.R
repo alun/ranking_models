@@ -3,7 +3,7 @@ library(ggpubr)
 library(reshape)
 library(rstan)
 library(tidyverse)
-require(boot)
+library(boot)
 
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores(logical = FALSE))
@@ -52,7 +52,7 @@ ranking <-
 ranking$rank = 1:K
 
 # save estimated rankings 
-write_csv(ranking, files$ranking_bayes)
+write_csv(ranking, files$ranking_bradley_terry)
 
 # rankings/abilities plot
 save_plot(
@@ -73,8 +73,7 @@ save_plot(
 # study the variance in estimated abitlities
 abilities_by_rank <- abilities_sample[, ranking$player]
 ranking$ability_variance <-
-  sapply(as.data.frame(abilities_by_rank), function(x)
-    var(x))
+  sapply(as.data.frame(abilities_by_rank), var)
 
 save_plot(
   ggplot(ranking, aes(x = sets_played, y = 1 / ability_variance)) +

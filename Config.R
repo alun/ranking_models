@@ -5,7 +5,7 @@ files <- list(
   sets_played_out = 'data/produced/sets_played.csv',
   bradley_terry_out = 'data/produced/bradley_terry_2017.csv',
   sbm_out = 'data/produced/sbm_2017.csv',
-  ranking_bayes = 'data/produced/ranking_bayes.csv',
+  ranking_bradley_terry = 'data/produced/ranking_bradley_terry.csv',
   ranking_p_strong_cluster = 'data/produced/ranking_p_strong_cluster.csv'
 )
 
