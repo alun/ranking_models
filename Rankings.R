@@ -50,7 +50,8 @@ ranks_2 <-
   atp %>%
   left_join(p_strong, by = join_by(player)) %>%
   select(atp_rank, rank) %>%
-  dplyr::rename(pstrong_rank = rank)
+  dplyr::rename(pstrong_rank = rank) %>%
+  drop_na()
 
 # save rankings comparison plot
 save_plot(
@@ -65,11 +66,6 @@ save_plot(
   charts$atp_vs_pstrong
 )
 
-
-```{r}
+# RMSE and correlation
 sqrt(mean((ranks_2$atp_rank - ranks_2$pstrong_rank) ^ 2))
-```
-
-```{r}
 cor(ranks_2) 
-```
