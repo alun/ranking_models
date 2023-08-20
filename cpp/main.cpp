@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 #include "truncated_normal.hpp"
 
-static const long unsigned int seed = 42;
+static const long unsigned int seed = 777;
 static default_random_engine gen{seed};
 
 // Generates random numbers between 0 and 1

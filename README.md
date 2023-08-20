@@ -12,14 +12,15 @@ Source code for an MA Statistics thesis project at UCD.
 ## Project overview
 
 -   `Config.R` - shared filed with input and output file names and color theme
--   `PlotConfig.R` - shared config for `ggplot2` and helper routiens
+-   `PlotConfig.R` - shared config for `ggplot2` and helper routines
 -   `data` - input source [ATP data](https://datahub.io/sports-data/atp-world-tour-tennis-data) and data derived by analysis
--   `PrepareData.R` - R script for EDA and to convert ATP data to necceary formats
+-   `PrepareData.R` - R script for EDA and to convert ATP data to necessary formats
 -   `charts` - output for SVG charts
 -   `BradleyTerry.R` - code for the Bradley Terry analysis
 -   `cpp` - C++ for Stochastic Block Model (SBM) inference
 -   `SBMTest.R` - some code to verify correctness of the SBM C++ code
 -   `SBM.R` - code for clustering analysis with SBM 
+-   `Rankings.R` - code to compare obtained rankings to ATP rankings
 
 # Acknowledgements
 

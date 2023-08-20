@@ -59,7 +59,6 @@ plot(colMeans(z))
 dim(results$pi)
 
 pi <- results$pi
-plot(pi)
 
 # gather Bradley-Terry ranking and assigned clusters into a data frame
 ranking_bradley_terry <- read_csv(files$ranking_bradley_terry)
@@ -73,12 +72,19 @@ dt <- arrange(dt, rank)
 dt
 
 # plot density of the posterior Pi[1,2] 
-ggplot(tibble(p=pi), aes(x=p)) + 
-  geom_histogram(alpha=0.5, bins=10, fill=colors$color_1) +
-  geom_density(alpha=0.5) +
-  xlab("Posterior Pi[1,2]") +
-  ylab("Density") +
-  ggtitle("Posterior Pi Density")
+save_plot(
+  ggplot(tibble(p = t(pi)), aes(x = p)) +
+    geom_histogram(aes(y = ..density..),
+      alpha = colors$alpha,
+      bins = 10,
+      fill = colors$color_1,
+    ) +
+    geom_density(alpha = colors$alpha) +
+    xlab("Posterior Pi[1,2]") +
+    ylab("Density") +
+    ggtitle("Posterior Pi Density"),
+  file = charts$pi_posterior_distribution
+)
 
 # how Bradley-Terry abilities correlate with found SBM clusters?
 save_plot(
@@ -127,7 +133,7 @@ save_plot(
   charts$cluster_sizes
 )
 
-# alternative ranking based on the probability of the strong cluster
+# alternative ranking based on the probability of the strongest cluster
 cluster_1_prob <- function(sample) {
   mean(sample == 1)
 }
@@ -138,7 +144,7 @@ dt$cluster_1_prob_sd <- apply(z[,dt$player], 2, cluster_1_prob_sd)
 save_plot(
   ggplot(dt, aes(x = rank, y = cluster_1_prob)) +
     geom_point(alpha = colors$alpha, color = colors$color_2) +
-    xlab("Bradley-Terry rank") +
+    xlab("Bradley- Terry rank") +
     ylab("P") +
     ggtitle("Probability of the strongest cluster"),
   charts$rank_vs_cluster_1_prob

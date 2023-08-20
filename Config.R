@@ -10,23 +10,17 @@ files <- list(
 )
 
 charts <- list(
-  sets_played = "charts/sets_played.svg",
-  prior_motivation = "charts/prior_motivation.svg",
-  abilities = "charts/abilities.svg",
-  ability_variance = "charts/ability_variance.svg",
-  prob_winning_splits = "charts/prob_winning_splits.svg",
-  rank_vs_cluster = "charts/rank_vs_cluster.svg",
-  rank_vs_cluster_1_prob = "charts/rank_vs_cluster_1_prob.svg",
-  sbm_input = "charts/sbm_input.svg",
-  ability_vs_cluster = "charts/ability_vs_cluster.svg",
-  cluster_sizes = "charts/cluster_sizes.svg",
-  atp_vs_bt = "charts/atp_vs_bt.svg",
-  atp_vs_pstrong.svg = "charts/atp_vs_pstrong.svg"
-)
-
-colors <- list(
-  alpha = 0.7,
-  color_0 = 'black',
-  color_1 = 'green',
-  color_2 = 'magenta'
+  sets_played = "charts/sets_played.pdf",
+  prior_motivation = "charts/prior_motivation.pdf",
+  abilities = "charts/abilities.pdf",
+  ability_variance = "charts/ability_variance.pdf",
+  prob_winning_splits = "charts/prob_winning_splits.pdf",
+  rank_vs_cluster = "charts/rank_vs_cluster.pdf",
+  rank_vs_cluster_1_prob = "charts/rank_vs_cluster_1_prob.pdf",
+  sbm_input = "charts/sbm_input.pdf",
+  pi_posterior_distribution = "charts/pi_posterior_distribution.pdf",
+  ability_vs_cluster = "charts/ability_vs_cluster.pdf",
+  cluster_sizes = "charts/cluster_sizes.pdf",
+  atp_vs_bt = "charts/atp_vs_bt.pdf",
+  atp_vs_pstrong.pdf = "charts/atp_vs_pstrong.pdf"
 )

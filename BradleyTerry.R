@@ -122,7 +122,7 @@ save_plot(
       ncol = 3
     ),
     text_grob("Prior probability of winning density",
-              size = 22)
+              size = 22, family="LM Roman 10")
   ),
   charts$prior_motivation,
   width = 16,
@@ -191,11 +191,11 @@ plot <- ggarrange(
   legend = "bottom",
   nrow = 1,
   ncol = 3
-)
+) 
 
 save_plot(
   annotate_figure(plot, text_grob("Posterior predictive probability", 
-                                  size = 22)),
+                                  size = 22, family="LM Roman 10")),
   charts$prob_winning_splits,
   width = 16,
   height = 8
