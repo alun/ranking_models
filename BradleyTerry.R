@@ -76,10 +76,10 @@ ranking$ability_variance <-
   sapply(as.data.frame(abilities_by_rank), var)
 
 save_plot(
-  ggplot(ranking, aes(x = sets_played, y = 1 / ability_variance)) +
+  ggplot(ranking, aes(x = 1 / sets_played, y = ability_variance)) +
     geom_point(color = colors$color_2, alpha = colors$alpha) +
-    xlab("Sets played") +
-    ylab("Ability variance reciprocal") +
+    xlab("Reciprocal of the sets played") +
+    ylab("Variance") +
     ggtitle("Variance of estimated abilities"),
   file = charts$ability_variance
 )
